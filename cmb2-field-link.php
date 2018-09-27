@@ -119,12 +119,7 @@ if ( ! class_exists( 'CMB2_Field_Link' ) ) {
      * Santize Field.
      */
     public static function sanitize_link( $check, $meta_value, $object_id, $field_args, $sanitize_object ) {
-      /*
-      print '<pre>';
-      print_r($field_args);
-      print_r($meta_value);
-      print '</pre>';
-      /**/
+
       if ( !is_array( $meta_value ) || !( array_key_exists('repeatable', $field_args ) && $field_args['repeatable'] == TRUE ) ) {
         return $check;
       }
