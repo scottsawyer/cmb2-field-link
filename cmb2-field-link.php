@@ -46,6 +46,7 @@ if ( ! class_exists( 'CMB2_Field_Link' ) ) {
         'text'	=> '',
         'class'	=> '',
         'rel'	=> '',
+        'title' => '',
       ] );
 
       ?>
@@ -90,7 +91,17 @@ if ( ! class_exists( 'CMB2_Field_Link' ) ) {
           'value' => $field_escaped_value['rel'],
           'desc' => 'The rel property ( "nofollow" ).',
         ] ); ?>
-      </div>            
+      </div>
+      <div style="overflow: hidden">
+        <p><label for="<?= $field_type_object->_id( '_title' ); ?>"><?= esc_html( 'Title' ); ?></label></p>
+        <?= $field_type_object->input( [
+          'type' => 'text',
+          'name' => $field_type_object->_name( '[title]' ),
+          'id' => $field_type_object->_id( '_title' ),
+          'value' => $field_escaped_value['title'],
+          'desc' => 'The title property ( Displays when hovering over link ).',
+        ] ); ?>
+      </div>                     
       <?php
       echo $field_type_object->_desc( true );
       //return $this->rendered( ob_get_clean() );
@@ -104,7 +115,7 @@ if ( ! class_exists( 'CMB2_Field_Link' ) ) {
         return $override_value;
       }
 
-      $link_keys = ['href', 'text', 'class', 'rel'];
+      $link_keys = ['href', 'text', 'class', 'rel', 'title'];
 
       foreach ( $link_keys as $key ) {
         if ( ! empty( $value[ $key ] ) ) {
