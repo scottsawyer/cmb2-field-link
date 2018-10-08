@@ -30,7 +30,7 @@ $cmb->add_field( [
 );
 ```
 
-[link field example](https://github.com/scottsawyer/cmb2-field-link/raw/master/assets/images/screenshot-demo.wp-builder.net-2018.10.08-15-28-03.png)
+![link field example](https://github.com/scottsawyer/cmb2-field-link/raw/master/assets/images/screenshot-demo.wp-builder.net-2018.10.08-15-28-03.png)
 
 ## Accessing the link ##
 
