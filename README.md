@@ -58,4 +58,4 @@ You can build your link like:
 print '<a href="' . $link['href'] . '" class="' . $link['class'] . '" rel="' . $link['rel'] . '" title="' . $link['title'] . '">' . $link['text'] . '</a>';
 ```
 
-It's a good idea to test for each properties before just trying to print them.
+It's a good idea to test for each property before just trying to print.
